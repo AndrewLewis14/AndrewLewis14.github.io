@@ -1,0 +1,128 @@
+/* Estilo geral */
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    display: grid;
+    gap: 20px;
+}
+
+/* Estilo do cabeçalho */
+header {
+    background-color: #222;
+    color: #ffb400;
+    padding: 20px 0;
+    text-align: center;
+    grid-column: 1 / -1; /* Estende o cabeçalho por todas as colunas */
+    border-radius: 0 0 20px 20px;
+}
+
+.logo {
+    font-size: 2em;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: #ffb400;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #ff4500; /* cor de laranja para hover */
+}
+
+/* Estilo do conteúdo */
+.news-item {
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 20px;
+    transition: transform 0.3s ease;
+}
+
+.news-item:hover {
+    transform: translateY(-5px);
+}
+
+.news-item img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.news-content {
+    line-height: 1.8;
+}
+
+.ratings {
+    margin-top: 15px;
+}
+
+.ratings p {
+    margin: 5px 0;
+    font-size: 1em;
+}
+
+/* Estilo do rodapé */
+footer {
+    background-color: #222;
+    color: #fff;
+    text-align: center;
+    padding: 40px 0;
+    grid-column: 1 / -1; /* Estende o rodapé por todas as colunas */
+    border-radius: 20px 20px 0 0;
+}
+
+footer h4 {
+    margin-bottom: 20px;
+    font-size: 1.5em;
+}
+
+footer a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 10px;
+    transition: color 0.3s ease;
+}
+
+footer a:hover {
+    color: #ff4500; /* cor de laranja para hover */
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 20px;
+    }
+
+    .news-item {
+        grid-template-columns: 1fr;
+    }
+}
+

@@ -1,0 +1,196 @@
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    display: grid;
+    gap: 20px;
+}
+
+/* Estilo do cabeçalho */
+header {
+    background-color: #222;
+    color: #ffb400;
+    padding: 10px 0;
+    text-align: center;
+    grid-column: 1 / -1; /* Estende o cabeçalho por todas as colunas */
+}
+
+.logo {
+    font-size: 2em;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: #ffb400;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #ff4500; /* cor de laranja para hover */
+}
+
+
+section {
+    padding: 6rem 2rem;
+    margin-top: 4rem;
+}
+
+h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    color: #ffb400;
+    text-align: center;
+    position: relative;
+    display: inline-block;
+    background: #333;
+    padding: 0.5rem 1rem;
+    border-radius: 10px;
+}
+
+h2::after {
+    content: '';
+    display: block;
+    width: 70px;
+    height: 3px;
+    background: #ffb400;
+    margin: 0.5rem auto 0;
+}
+
+/* Container principal */
+/* Container principal */
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background: #f3f4f6;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Título principal */
+.container h1 {
+    text-align: center;
+    color: #000000;
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+/* Estilo da seção de notícias */
+.news-item {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #ecf0f1;
+    padding-bottom: 20px;
+}
+
+.news-item:last-child {
+    border-bottom: none;
+}
+
+/* Estilo da imagem */
+.news-item img {
+    max-width: 400px;
+    height: 423px;
+    border-radius: 20px;
+    margin-right: 20px;
+    border: 2px solid #3498db;
+    transition: transform 0.3s;
+}
+
+.news-item img:hover {
+    transform: scale(1.05);
+}
+
+/* Estilo do conteúdo da notícia */
+.news-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* Título da notícia */
+.news-content h2 {
+    color: #efc000;
+    font-size: 1.8em;
+    margin-bottom: 10px;
+}
+
+/* Descrição da notícia */
+.news-content p {
+    color: #7f8c8d;
+    font-size: 1em;
+    line-height: 1.5em;
+    margin-bottom: 10px;
+}
+
+/* Estilo específico para o diretor */
+.news-content .director {
+    color: #2980b9;
+    font-weight: bold;
+}
+
+/* Estilo específico para a bilheteria */
+.news-content .box-office {
+    color: #ffffff;
+    background: #e74c3c;
+    font-size: 1.5em;
+    font-weight: bold;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+    width: fit-content;
+    margin-top: 10px;
+}
+
+footer {
+    background-color: #f8f9fa;
+    padding: 20px 0;
+    text-align: center;
+    font-family: Arial, sans-serif;
+    color: #333;
+    border-top: 1px solid #ccc;
+}
+
+footer p {
+    margin-bottom: 10px;
+}
+
+footer h4 {
+    font-size: 1.2em;
+    margin-bottom: 15px;
+}
+
+footer a {
+    display: inline-block;
+    text-decoration: none;
+    color: #555;
+    margin: 0 10px;
+    transition: color 0.3s ease;
+}
+
+footer a:hover {
+    color: #007bff; /* ou qualquer outra cor de destaque que preferir */
+}
+

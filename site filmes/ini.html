@@ -1,0 +1,239 @@
+⭐⭐⭐⭐☆
+
+<button class="details-btn" onclick="showDetails('Filme 1', 'Descrição completa do Filme 1.')">Ver Detalhes</button>
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Site de Filmes Inovador</title>
+    <link rel="stylesheet" href="ini.css">
+</head>
+<body>
+    <header>
+        <div class="logo">🎬 MovieSite</div>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#filmes">Filmes</a></li>
+                <li><a href="#trending">Trending</a></li>
+                <li><a href="#trailers">Trailers</a></li>
+                <li><a href="#enquete">Enquete</a></li>
+                <li><a href="#galeria">Galeria</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home" class="hero">
+            <div class="hero-content">
+                <h1>Bem-vindo ao MovieSite</h1>
+                <p>O melhor lugar para encontrar seus filmes favoritos</p>
+                <a href="#filmes" class="btn">Ver Filmes</a>
+            </div>
+        </section>
+
+        <section id="filmes" class="container">
+            <h2>Lista de Filmes</h2>
+            <div class="movie-grid">
+                <div class="movie-card">
+                    <img src="https://via.placeholder.com/200x300/FF5733/FFFFFF?text=Filme+1" alt="Filme 1">
+                    <h3>Filme 1</h3>
+                    <p>Descrição breve do filme.</p>
+                    <button class="details-btn" onclick="showDetails('Filme 1', 'Descrição completa do Filme 1.')">Ver Detalhes</button>
+                </div>
+                <div class="movie-card">
+                    <img src="https://via.placeholder.com/200x300/33FF57/FFFFFF?text=Filme+2" alt="Filme 2">
+                    <h3>Filme 2</h3>
+                    <p>Descrição breve do filme.</p>
+                    <button class="details-btn" onclick="showDetails('Filme 2', 'Descrição completa do Filme 2.')">Ver Detalhes</button>
+                </div>
+                <!-- Adicione mais cards conforme necessário -->
+            </div>
+        </section>
+
+        <section id="trending" class="container">
+            <h2>Filmes em Alta</h2>
+            <div class="trending-grid">
+                <div class="trending-card">
+                    <img src="https://via.placeholder.com/400x200/FF5733/FFFFFF?text=Filme+6" alt="Filme 6">
+                    <h3>Filme em Alta 1</h3>
+                    <p>Descrição curta.</p>
+                </div>
+                <!-- Adicione mais cards de filmes em alta -->
+            </div>
+        </section>
+
+        <section id="trailers" class="container">
+            <h2>Galeria de Trailers</h2>
+            <div class="trailer-grid">
+                <div class="trailer-card">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/ScMzIvxBSi4" title="Trailer 1"></iframe>
+                    <h3>Trailer 1</h3>
+                </div>
+                <!-- Adicione mais cards de trailers conforme necessário -->
+            </div>
+        </section>
+
+        <section id="enquete" class="container">
+            <h2>Enquete: Qual o Melhor Filme?</h2>
+            <form id="pollForm">
+                <label>
+                    <input type="radio" name="poll" value="Filme 1">
+                    Filme 1
+                </label><br>
+                <label>
+                    <input type="radio" name="poll" value="Filme 2">
+                    Filme 2
+                </label><br>
+                <label>
+                    <input type="radio" name="poll" value="Filme 3">
+                    Filme 3
+                </label><br>
+                <label>
+                    <input type="radio" name="poll" value="Filme 4">
+                    Filme 4
+                </label><br>
+                <button type="button" onclick="submitPoll()">Votar</button>
+            </form>
+            <div id="pollResults"></div>
+        </section>
+
+        <section id="galeria" class="container">
+            <h2>Galeria de Imagens</h2>
+            <div class="carousel-container">
+                <div class="carousel">
+                    <div class="slides">
+                        <img src="https://via.placeholder.com/800x400/FF5733/FFFFFF?text=Imagem+1" alt="Imagem 1">
+                    </div>
+                    <div class="slides">
+                        <img src="https://via.placeholder.com/800x400/33FF57/FFFFFF?text=Imagem+2" alt="Imagem 2">
+                    </div>
+                    <div class="slides">
+                        <img src="https://via.placeholder.com/800x400/5733FF/FFFFFF?text=Imagem+3" alt="Imagem 3">
+                    </div>
+                    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                </div>
+                <div class="dots-container">
+                    <span class="dot" onclick="currentSlide(1)"></span>
+                    <span class="dot" onclick="currentSlide(2)"></span>
+                    <span class="dot" onclick="currentSlide(3)"></span>
+                </div>
+            </div>
+        </section>
+
+        <section id="contato" class="container">
+            <h2>Contato</h2>
+            <form>
+                <label for="name">Nome:</label>
+                <input type="text" id="name" name="name" required>
+                
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                
+                <label for="message">Mensagem:</label>
+                <textarea id="message" name="message" required></textarea>
+                
+                <button type="submit">Enviar</button>
+            </form>
+        </section>
+    </main>
+
+    <div class="movie-card">
+        <img src="https://via.placeholder.com/200x300/FF5733/FFFFFF?text=Filme+4" alt="Filme 4">
+        <h3>Filme 4</h3>
+        <p>Descrição breve do filme.</p>
+        <button class="details-btn" onclick="showDetails('Filme 4', 'Descrição completa do Filme 4.')">Ver Detalhes</button>
+    </div>
+    <div class="movie-card">
+        <img src="https://via.placeholder.com/200x300/33FF57/FFFFFF?text=Filme+5" alt="Filme 5">
+        <h3>Filme 5</h3>
+        <p>Descrição breve do filme.</p>
+        <button class="details-btn" onclick="showDetails('Filme 5', 'Descrição completa do Filme 5.')">Ver Detalhes</button>
+    </div>
+
+    <div class="trending-card">
+        <img src="https://via.placeholder.com/400x200/5733FF/FFFFFF?text=Filme+8" alt="Filme 8">
+        <h3>Filme em Alta 3</h3>
+        <p>Descrição curta.</p>
+    </div>
+    <div class="trending-card">
+        <img src="https://via.placeholder.com/400x200/FF5733/FFFFFF?text=Filme+9" alt="Filme 9">
+        <h3>Filme em Alta 4</h3>
+        <p>Descrição curta.</p>
+    </div>
+
+    <div class="trailer-card">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/VIDEO_ID" title="Trailer 3"></iframe>
+        <h3>Trailer 3</h3>
+    </div>
+    <div class="trailer-card">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/VIDEO_ID" title="Trailer 4"></iframe>
+        <h3>Trailer 4</h3>
+    </div>
+
+    
+    <label>
+        <input type="radio" name="poll" value="Filme 7">
+        Filme 7
+    </label><br>
+    <label>
+        <input type="radio" name="poll" value="Filme 8">
+        Filme 8
+    </label><br>
+
+    
+    <div class="slides">
+        <img src="https://via.placeholder.com/800x400/33FF57/FFFFFF?text=Imagem+4" alt="Imagem 4">
+    </div>
+    <div class="slides">
+        <img src="https://via.placeholder.com/800x400/5733FF/FFFFFF?text=Imagem+5" alt="Imagem 5">
+    </div>
+
+    
+    <label for="subject">Assunto:</label>
+<input type="text" id="subject" name="subject">
+
+
+<div id="map">
+    <!-- Aqui você pode incorporar um mapa usando uma API como Google Maps -->
+    <!-- Exemplo: <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13802.880282627613!2dLONGITUDE!3dLATITUDE!4d0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zLATITUDE!4zLONGITUDE!5e0!3m2!1sen!2sus!4v1569424556299!5m2!1sen!2sus"></iframe> -->
+</div>
+
+
+
+    <footer>
+        <nav>
+            <ul>
+                <li><a href="#politica-de-privacidade">Política de Privacidade</a></li>
+                <li><a href="#termos-de-uso">Termos de Uso</a></li>
+                <li><a href="#faq">FAQ</a></li>
+            </ul>
+        </nav>
+        <p>&copy; 2024 MovieSite. Todos os direitos reservados.</p>
+    </footer>
+
+    <script src="ini.js"></script>
+</body>
+</html>
+
+
+<section id="eventos">
+    <h2>Principais Lançamentos</h2>
+    <div class="evento-grid">
+        <div class="evento-card">
+            <h3>Lançamento de Novos Filmes</h3>
+            <p>Data: 10 de Agosto, 2024</p>
+            <p>Descrição do evento de lançamento.</p>
+        </div>
+        <div class="evento-card">
+            <h3>Exposição de Cinema</h3>
+            <p>Data: 5 de Setembro, 2024</p>
+            <p>Descrição da exposição de cinema.</p>
+        </div>
+        <!-- Adicione mais eventos conforme necessário -->
+    </div>
+</section>

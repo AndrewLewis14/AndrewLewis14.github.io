@@ -1,0 +1,538 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background: #0e0e0e;
+    color: #fff;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background: #1e1e1e;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #f39c12;
+    animation: text-flicker 1.5s infinite;
+}
+
+@keyframes text-flicker {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.4; }
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    transition: background 0.3s, transform 0.3s;
+}
+
+nav a:hover {
+    background: #f39c12;
+    transform: scale(1.1);
+}
+
+main {
+    margin-top: 80px;
+}
+
+.hero {
+    height: 100vh;
+    background: url('https://via.placeholder.com/1600x800') no-repeat center center/cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #fff;
+}
+
+.hero-content {
+    background: rgba(0, 0, 0, 0.5);
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin: 0;
+}
+
+.hero p {
+    font-size: 1.5rem;
+    margin: 1rem 0;
+}
+
+.hero .btn {
+    padding: 0.7rem 1.5rem;
+    background: #f39c12;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.3s;
+}
+
+.hero .btn:hover {
+    background: #e67e22;
+    transform: scale(1.1);
+}
+
+.container {
+    padding: 2rem 1rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+h2 {
+    font-size: 2.5rem;
+    background: -webkit-linear-gradient(#f39c12, #f1c40f);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: text-glow 1.5s infinite;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+@keyframes text-glow {
+    0%, 100% { text-shadow: 0 0 10px #f39c12, 0 0 20px #f1c40f; }
+    50% { text-shadow: 0 0 20px #f39c12, 0 0 30px #f1c40f; }
+}
+
+.movie-grid, .trending-grid, .trailer-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 1rem;
+}
+
+.movie-card, .trending-card, .trailer-card {
+    background: #222;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.movie-card:hover, .trending-card:hover, .trailer-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+.movie-card img, .trending-card img {
+    width: 100%;
+    height: auto;
+    border-bottom: 1px solid #444;
+    transition: transform 0.3s, filter 0.3s;
+}
+
+.movie-card img:hover, .trending-card img:hover {
+    transform: scale(1.1);
+    filter: brightness(70%);
+}
+
+.details-btn {
+    background-color: #f39c12;
+    color: #fff;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 1rem 0;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.details-btn:hover {
+    background-color: #e67e22;
+    transform: scale(1.1);
+}
+
+.carousel-container {
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.carousel .slides {
+    display: none;
+}
+
+.carousel .slides img {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.carousel .prev, .carousel .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+
+.carousel .prev {
+    left: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.carousel .next {
+    right: 0;
+    border-radius: 0 3px 3px 0;
+}
+
+.carousel .prev:hover, .carousel .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.dots-container {
+    text-align: center;
+    padding: 1rem;
+}
+
+.dots-container .dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.dots-container .dot.active, .dots-container .dot:hover {
+    background-color: #717171;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    background: #f9f9f9;
+    padding: 1rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+form label {
+    margin: 0.5rem 0 0.2rem;
+}
+
+form input, form textarea {
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+form button {
+    padding: 0.7rem;
+    border: none;
+    border-radius: 5px;
+    background-color: #333;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+form button:hover {
+    background-color: #555;
+    transform: scale(1.05);
+}
+
+footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: #333;
+    color: #fff;
+}
+
+#pollResults {
+    margin-top: 1rem;
+    font-size: 1.2rem;
+    color: #333;
+    text-align: center;
+}
+
+
+.logo {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 10px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #FF5733;
+}
+
+/* Estilos para o botão */
+.btn {
+    display: inline-block;
+    background-color: #FF5733;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #D9534F;
+}
+
+/* Estilos para os cards de filmes */
+/* Estilos para os cards de filmes */
+.movie-card {
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin: 10px 5px; /* Reduzindo a margem vertical e horizontal */
+    padding: 10px; /* Reduzindo o padding interno */
+    text-align: center;
+    border-radius: 5px;
+    width: 200px; /* Definindo uma largura fixa para manter os cards mais compactos */
+    display: inline-block; /* Fazendo os cards se alinharem horizontalmente */
+    vertical-align: top; /* Alinhando os cards ao topo para manter uma grade uniforme */
+}
+
+.movie-card img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.movie-card h3 {
+    margin-top: 10px;
+    font-size: 1.2rem; /* Reduzindo o tamanho da fonte do título */
+    color: #333;
+}
+
+.movie-card p {
+    color: #666;
+    font-size: 0.9rem; /* Reduzindo o tamanho da fonte da descrição */
+}
+
+.details-btn {
+    background-color: #FF5733;
+    color: #fff;
+    border: none;
+    padding: 8px 12px; /* Reduzindo o padding do botão */
+    margin-top: 10px;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.details-btn:hover {
+    background-color: #D9534F;
+}
+
+/* Estilos para a seção de enquete */
+/* Estilos para a seção de enquete */
+#enquete {
+    background-color: #f9f9f9;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#enquete h2 {
+    font-size: 1.8rem;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+#pollForm label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+#pollForm input[type="radio"] {
+    margin-right: 10px;
+}
+
+#pollForm button {
+    background-color: #FF5733;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#pollForm button:hover {
+    background-color: #D9534F;
+}
+
+#pollResults {
+    margin-top: 20px;
+}
+
+#pollResults h3 {
+    font-size: 1.4rem;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.poll-option {
+    margin-bottom: 10px;
+}
+
+.poll-bar {
+    background-color: #FF5733;
+    height: 20px;
+    border-radius: 5px;
+    margin-bottom: 5px;
+    transition: width 0.5s ease;
+}
+
+.poll-label {
+    font-size: 1rem;
+    color: #333;
+    margin-left: 10px;
+}
+
+/* Estilos para o rodapé da barra de resultado */
+.poll-footer {
+    margin-top: 5px;
+    font-size: 0.8rem;
+    color: #666;
+    text-align: right;
+}
+
+/* Estilos para a seção de galeria de imagens */
+.carousel-container {
+    position: relative;
+    margin-top: 20px;
+}
+
+.carousel {
+    position: relative;
+    max-width: 800px;
+    margin: auto;
+    overflow: hidden;
+}
+
+.slides {
+    display: none;
+}
+
+.slides img {
+    width: 100%;
+    height: auto;
+}
+
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    z-index: 1;
+}
+
+.prev:hover, .next:hover {
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+.next {
+    right: 0;
+}
+
+.dots-container {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.dot {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    background-color: #bbb;
+    border-radius: 50%;
+    margin: 0 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.dot.active {
+    background-color: #333;
+}
+
+/* Estilos para o footer */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 20px;
+}
+
+footer p {
+    margin: 0;
+}
+
+footer nav ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+footer nav ul li {
+    display: inline;
+    margin-right: 10px;
+}
+
+footer nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+footer nav ul li a:hover {
+    color: #FF5733;
+}

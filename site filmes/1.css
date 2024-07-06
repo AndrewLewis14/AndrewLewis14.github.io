@@ -1,0 +1,63 @@
+.movie-grid, .trending-grid, .trailer-grid, .equipe-grid, .evento-grid, .galeria-grid, .avaliacao-grid {
+    display: flex;
+    gap: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+}
+
+/* Cards */
+.movie-card, .trending-card, .trailer-card, .equipe-card, .evento-card, .galeria-card, .avaliacao-card {
+    background: #1f1f1f;
+    border-radius: 5px;
+    padding: 1rem;
+    text-align: center;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s;
+}
+
+.movie-card:hover, .trending-card:hover, .trailer-card:hover, .equipe-card:hover, .evento-card:hover, .galeria-card:hover, .avaliacao-card:hover {
+    transform: translateY(-10px);
+}
+
+.movie-card img, .trending-card img, .equipe-card img, .galeria-card img {
+    width:100%;
+    height: 500px;
+    object-fit: cover;
+    border-radius: 4px;
+    margin-bottom: 1rem;
+}
+
+
+
+.movie-card, .trending-card, .trailer-card, .equipe-card, .evento-card, .galeria-card, .avaliacao-card {
+    background: #1f1f1f;
+    border-radius: 5px;
+    padding: 1rem;
+    text-align: center;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s;
+    
+}
+
+.movie-card:hover, .trending-card:hover, .trailer-card:hover, .equipe-card:hover, .evento-card:hover, .galeria-card:hover, .avaliacao-card:hover {
+    transform: translateY(-10px);
+}
+
+.movie-card img, .trending-card img, .equipe-card img, .galeria-card img {
+    width: 70%;
+    height: 70px; /* Ajusta a altura automaticamente */
+    object-fit: cover;
+    border-radius: 4px;
+    margin-bottom: 1rem;
+}
+
+@media (max-width: 768px) {
+    .movie-grid, .trending-grid, .trailer-grid, .equipe-grid, .evento-grid, .galeria-grid, .avaliacao-grid {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Ajusta para telas menores */
+    }
+}
+
+@media (max-width: 480px) {
+    .movie-grid, .trending-grid, .trailer-grid, .equipe-grid, .evento-grid, .galeria-grid, .avaliacao-grid {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Ajusta ainda mais para telas pequenas */
+    }
+}
